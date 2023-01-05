@@ -1,0 +1,821 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+:root {
+    --heading: rgb(0, 10, 45);
+    --para: #777;
+    --para-tint: #e4e4e4;
+    --white: #fff;
+    --black: #212529;
+    --helper: #8490ff;
+    --helper-tint: #f3f4ff;
+    --bg: rgb(249 249 255);
+    --bgSupport: rgb(144 172 209 / 20%);
+    --gradient: linear-gradient(0deg,
+            rgb(132 144 255) 0%,
+            rgb(98 189 252) 100%);
+    --gradientSupport: -webkit-linear-gradient(0deg,
+            rgb(132 144 255) 0%,
+            rgb(98 189 252) 100%);
+    --shadow: 0px 0px 20px 0px rgb(132 144 252 / 20%);
+    --shadowSupport: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px; */
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    color: var(--heading);
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+p {
+    color: var(--para);
+    line-height: 1.6;
+    font-size: 1.7rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* ==================
+    Header Start Here
+   ==================
+*/
+
+.header {
+    padding: 0 4.8rem;
+    height: 5rem;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header .logo {
+    height: 3.5rem;
+}
+
+.header .navbar-list {
+    display: flex;
+    gap: 4.5rem;
+
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--black);
+    text-transform: uppercase;
+    transition: color 0.3s linear;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+    color: var(--helper);
+}
+
+/* ==================
+    Resuable code
+   ==================
+*/
+.section {
+    padding: 8rem 0;
+}
+
+.container {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    gap: 8rem;
+}
+
+.grid-two-colmn {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three-colmn {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four-colmn {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+    background: var(--gradientSupport);
+    padding: 1.4rem 2.6rem;
+    text-transform: uppercase;
+    display: inline-block;
+    color: var(--helper-tint);
+    font-size: 1.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+
+}
+
+.btn:hover,
+.btn:active {
+    box-shadow: var(--shadowSupport);
+}
+
+.common-heading {
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.common-heading::before {
+    content: "";
+    position: absolute;
+    top: 105%;
+    left: 0;
+    width: 1.1rem;
+    height: 1.1rem;
+    background: var(--helper);
+    border-radius: 50%;
+}
+
+.common-heading::after {
+    content: "";
+    position: absolute;
+    top: 114%;
+    left: 1.1rem;
+    min-width: 11rem;
+    height: .2rem;
+    background: var(--helper);
+}
+
+/* ==================
+    Hero Section Start Here
+   ==================
+*/
+
+.section-hero {
+    background-color: var(--bg);
+}
+
+.section-hero-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-top-data {
+    text-transform: uppercase;
+    color: var(--helper);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.hero-heading {
+    text-transform: uppercase;
+    color: var(--heading);
+    font-size: 5.5rem;
+}
+
+.hero-para {
+    margin-top: 1.4rem;
+    margin-bottom: 4.5rem;
+    max-width: 60rem;
+}
+
+.section-hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    max-width: 80%;
+}
+
+/* ========================
+    Hero Section Start Here
+   ========================
+*/
+
+
+.bio-image {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.bio-image img {
+    max-width: 80%;
+    box-shadow: -1.5rem -1.5rem 0 0 var(--helper);
+}
+
+.bio-data-stats {
+    display: flex;
+    flex-direction: column;
+    padding: 3.5rem 0;
+    gap: 2.5rem;
+}
+
+.bio-data-stats h3 {
+    margin-bottom: 0.5rem;
+}
+
+.bio-progress-bar {
+    width: 90%;
+    height: 0.6rem;
+    background: var(--para-tint);
+    border-radius: 10rem;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.bio-progress-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: inherit;
+    border-radius: inherit;
+    background: var(--gradientSupport);
+}
+
+.progress-bar2::before {
+    width: 90%;
+}
+
+.progress-bar3::before {
+    width: 70%;
+}
+
+.progress-bar4::before {
+    width: 60%;
+}
+
+.progress-bar5::before {
+    width: 30%;
+}
+
+.bio-progress-bar span {
+    position: absolute;
+    top: 1.3rem;
+    left: 36.5%;
+    width: 3rem;
+    height: 1.8rem;
+    background: var(--helper);
+    color: var(--white);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar2 span {
+    left: 86.5%;
+}
+
+.progress-bar3 span {
+    left: 66.5%;
+}
+
+.progress-bar4 span {
+    left: 56.5%;
+}
+
+.progress-bar5 span {
+    left: 26.5%;
+}
+
+/* to create a caret */
+.bio-progress-bar span::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0.7rem solid var(--helper);
+    border-color: transparent;
+    border-bottom-color: var(--helper);
+    top: -1.4rem;
+}
+
+/* ========================
+    Portfolio Section Start Here
+   ========================
+*/
+
+.section-portfolio {
+    background: var(--bg);
+    transition: all 0.7s linear;
+}
+
+.section-portfolio p {
+    max-width: 50rem;
+}
+
+.section-portfolio .p-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4.5rem 0;
+    gap: 2.5rem;
+}
+
+.portfolio-images {
+    gap: 3rem;
+    overflow: hidden;
+}
+
+.portfolio-images img {
+    width: 100%;
+    height: 19.1rem;
+    border-radius: .7rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-overlay .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradientSupport);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    transition: all 0.3s linear;
+    border-radius: .7rem;
+}
+
+.img-overlay:hover>.overlay {
+    transform: translateY(0);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.img-overlay .common-heading {
+    color: var(--white);
+    margin: 0;
+    text-decoration: none;
+}
+
+.p-btn-active {
+    transform: translateY(-1rem);
+}
+
+.p-img-not-active {
+    display: none;
+}
+
+
+/* ==================
+   work counter Section Start Here
+   ==================
+*/
+
+.section-work-counters {
+    background: var(--gradientSupport);
+    text-align: center;
+    color: var(--white);
+    transition: all 0.7s linear;
+}
+
+.section-work-counters .counter h2 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.section-work-counters .counter p {
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+/* ==================
+    service seciton Start Here
+   ==================
+*/
+
+.section-services {
+    transition: all 0.7s linear;
+}
+
+.section-services p {
+    max-width: 60rem;
+
+}
+
+.section-services .grid {
+    margin-top: 6rem;
+}
+
+.service-box {
+    text-align: center;
+    box-shadow: var(--shadow);
+    padding: 2rem 4rem;
+    transition: all 0.3s ease;
+}
+
+.service-box:hover,
+.service-box:active {
+    margin-top: -2rem;
+}
+
+.service-box .service-icon {
+    width: 7rem;
+    height: 7rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    background: var(--bgSupport);
+    border-radius: 5% 95% 15% 85% / 65% 0% 100% 35%;
+    transition: all 0.5s ease;
+    animation: water-wave 3s linear infinite;
+    position: relative;
+}
+
+.service-box .service-icon:hover,
+.service-box .service-icon:active {
+    transform: rotate(360deg);
+
+}
+
+.service-box .service-icon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    border: 1px solid var(--black);
+    animation: water-wave 3s linear infinite;
+
+}
+
+@keyframes water-wave {
+    0% {
+        border-radius: 5% 95% 15% 85% / 65% 0% 100% 35%  ;
+    }
+
+    50% {
+        border-radius: 51% 49% 48% 52% / 48% 46% 54% 52%  ;
+    }
+
+    100% {
+        border-radius: 5% 95% 15% 85% / 65% 0% 100% 35%  ;
+    }
+}
+
+.service-box h3 {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+.service-box p {
+    font-size: 1.5rem;
+}
+
+/* ==================
+    testimonial seciton Start Here
+   ==================
+*/
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.swiper-slide {
+    width: 80%;
+}
+
+.swiper-slide:nth-child(2n) {
+    width: 60%;
+}
+
+.swiper-slide:nth-child(3n) {
+    width: 40%;
+}
+
+.swiper-client-msg {
+    text-align: left;
+    padding: 2.5rem 6rem;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.swiper-client-msg::before{
+    content: "";
+    position: absolute;
+    left: 48%;
+    bottom: -8rem;
+    transform: translateX(-50%);
+    border: 4rem solid var(--helper-tint);
+    border-color: transparent;
+    border-top-color: var(--helper-tint);
+}
+
+.swiper-client-msg p {
+    font-size: 1.5rem;
+}
+
+.swiper-client-msg p::before{
+    content: "\f10d";
+    position: absolute;
+    top: 0;
+    left: 4%;
+    font-size: 3rem;
+    color: var(--helper);
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.swiper-client-msg p::after{
+    content: "\f10e";
+    position: absolute;
+    bottom: 0;
+    right:  8%;
+    font-size: 3rem;
+    color: var(--helper);
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.swiper-client-detail {
+    margin-top: 3rem;
+    gap: 0;
+}
+
+.swiper-client-detail .client-info {
+    margin-top: 1.5rem;
+}
+
+/* ==================
+   freelancing seciton Start Here
+   ==================
+*/
+
+.section-freelancing{
+    background-image: url('../images/freelancing-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    text-align: center;
+    position: relative;
+}
+
+.section-freelancing .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--helper);
+    opacity: 0.6;
+    
+}
+
+.section-freelancing .container{
+    position: relative;
+}
+
+.section-freelancing h2{
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.section-freelancing h2 span{
+    color: #a0f669;
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+.section-freelancing h2, .section-freelancing p{
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+/* ==================
+   contact seciton Start Here
+   ==================
+*/
+
+ .contact-container{
+    max-width: 55rem;
+    margin: 0 auto;
+}
+
+.section-contact-main form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section-contact-main form .grid{
+    gap: 2rem;
+}
+
+.section-contact-main form input, 
+.section-contact-main form textarea{
+    width: 100%;
+    padding: 1rem 2rem;
+    border: 0.5px solid #c9c9c9;
+    border-radius: .5rem;
+    font-family: "work sans";
+    font-size: 1.7rem;
+    transition: all 0.2s linear;
+}
+
+.section-contact-main form input:focus, 
+.section-contact-main form textarea:focus{
+    border: transparent;
+    outline: none;
+    box-shadow: var(--shadow);
+}
+
+.section-contact-main form input[type='submit']{
+    max-width: 10rem;
+    margin: 0 auto;
+    border: none;
+}
+
+/* ==================
+    Footer Start Here
+   ==================
+*/
+
+.section-footer{
+    background: var(--heading);
+    transition: all 0.3s linear;
+}
+
+.f-about h3,
+.f-links h3,
+.f-services h3,
+.f-addres h3{
+    color: var(--white);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.f-about p,
+.f-links li,
+.f-links a,
+.f-services li,
+.f-services a,
+.f-addres p{
+    color: #adadad;
+    font-size: 1.5rem;
+    
+}
+
+.section-footer p{
+    font-size: 1.4rem;
+}
+
+.f-links ul,
+.f-services ul,
+.f-addres address{
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+}
+
+.f-addres address,
+.f-addres a{
+    color: #adadad;
+    font-style: normal;
+}
+
+.f-addres address div:last-of-type a{
+    font-size: 1.3rem;
+    
+}
+
+.f-links span,
+.f-services span,
+.f-addres span{
+    margin-right: .5rem;
+}
+
+.f-links a:hover,
+.f-services a:hover,
+.f-addres a:hover{
+    color: var(--white);
+}
+
+.f-social-icons{
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.f-social-icons .icon {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    padding: 1.2rem 1.6rem;
+    background-color: var(--bgSupport);
+    border: none;
+    color: var(--white);
+    animation: water-wave 3s linear infinite;
+    cursor: pointer;
+
+}
+
+.f-credit{
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* ==================
+    scroll top  Start Here
+   ==================
+*/
+
+.scroll-style{
+    position: fixed;
+    right: 2%;
+    bottom: 4%;
+}
+
+.scroll-style .scroll-top{
+    width: 3rem;
+    height: 3rem;
+    color: var(--heading);
+    background-color: var(--helper);
+    display: inline-block;
+    padding: 1.2rem 1.6rem;
+    animation: water-wave 3s linear infinite;
+    cursor: pointer;
+}
