@@ -1,4 +1,15 @@
 // ======================
+// Creating a responsive navbar component
+// ======================
+
+const mob_btn = document.querySelector('.mobile-nav-btn');
+const headerElem = document.querySelector('.header');
+
+mob_btn.addEventListener('click', () => {
+    headerElem.classList.toggle('active');
+});
+
+// ======================
 // Creating a portgfolio tabbed component
 // ======================
 
@@ -24,6 +35,34 @@ p_btns.addEventListener('click' , (e)=> {
 
     active_img.forEach((currElem) => currElem.classList.remove("p-img-not-active"));
     
+});
+
+// ======================
+// Animated Number Js code here
+// ======================
+
+const countNum = document.querySelectorAll('.counter')
+
+const speed = 200;
+
+countNum.forEach((curElem) => {
+    const updateNum = () =>{
+        const targetNum = parseInt(curElem.dataset.number);
+        // console.log(targetNum);
+
+        const initialNum = parseInt(curElem.innerText);
+        // console.log(initialNum);
+
+        const incrementNum = Math.trunc(targetNum/speed);
+        // console.log(incrementNum);
+
+        if (initialNum < targetNum) {
+            curElem.innerText = `${initialNum + incrementNum}+`;
+            setTimeout(updateNum,10);
+        }
+    }
+
+    updateNum();
 });
 
 // ======================

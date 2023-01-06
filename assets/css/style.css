@@ -104,6 +104,17 @@ li {
     color: var(--helper);
 }
 
+.mobile-nav-btn {
+    display: none;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.mobile-nav-btn .mobile-nav-icon[name="close-outline"] {
+    display: none;
+}
+
 /* ==================
     Resuable code
    ==================
@@ -424,12 +435,12 @@ li {
     transition: all 0.7s linear;
 }
 
-.section-work-counters .counter h2 {
+.section-work-counters .counter {
     font-size: 4rem;
     font-weight: 700;
 }
 
-.section-work-counters .counter p {
+.section-work-counters p {
     color: var(--white);
     text-transform: capitalize;
 }
@@ -496,15 +507,15 @@ li {
 
 @keyframes water-wave {
     0% {
-        border-radius: 5% 95% 15% 85% / 65% 0% 100% 35%  ;
+        border-radius: 5% 95% 15% 85% / 65% 0% 100% 35%;
     }
 
     50% {
-        border-radius: 51% 49% 48% 52% / 48% 46% 54% 52%  ;
+        border-radius: 51% 49% 48% 52% / 48% 46% 54% 52%;
     }
 
     100% {
-        border-radius: 5% 95% 15% 85% / 65% 0% 100% 35%  ;
+        border-radius: 5% 95% 15% 85% / 65% 0% 100% 35%;
     }
 }
 
@@ -575,7 +586,7 @@ li {
     position: relative;
 }
 
-.swiper-client-msg::before{
+.swiper-client-msg::before {
     content: "";
     position: absolute;
     left: 48%;
@@ -590,7 +601,7 @@ li {
     font-size: 1.5rem;
 }
 
-.swiper-client-msg p::before{
+.swiper-client-msg p::before {
     content: "\f10d";
     position: absolute;
     top: 0;
@@ -601,11 +612,11 @@ li {
     font-weight: 900;
 }
 
-.swiper-client-msg p::after{
+.swiper-client-msg p::after {
     content: "\f10e";
     position: absolute;
     bottom: 0;
-    right:  8%;
+    right: 8%;
     font-size: 3rem;
     color: var(--helper);
     font-family: "Font Awesome 6 Free";
@@ -626,7 +637,7 @@ li {
    ==================
 */
 
-.section-freelancing{
+.section-freelancing {
     background-image: url('../images/freelancing-bg.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
@@ -635,7 +646,7 @@ li {
     position: relative;
 }
 
-.section-freelancing .overlay{
+.section-freelancing .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -643,25 +654,26 @@ li {
     height: 100%;
     background-color: var(--helper);
     opacity: 0.6;
-    
+
 }
 
-.section-freelancing .container{
+.section-freelancing .container {
     position: relative;
 }
 
-.section-freelancing h2{
+.section-freelancing h2 {
     font-size: 4rem;
     font-weight: 600;
 }
 
-.section-freelancing h2 span{
+.section-freelancing h2 span {
     color: #a0f669;
     font-weight: 900;
     font-size: 4rem;
 }
 
-.section-freelancing h2, .section-freelancing p{
+.section-freelancing h2,
+.section-freelancing p {
     color: var(--white);
     margin-bottom: 1rem;
 }
@@ -671,23 +683,23 @@ li {
    ==================
 */
 
- .contact-container{
+.contact-container {
     max-width: 55rem;
     margin: 0 auto;
 }
 
-.section-contact-main form{
+.section-contact-main form {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.section-contact-main form .grid{
+.section-contact-main form .grid {
     gap: 2rem;
 }
 
-.section-contact-main form input, 
-.section-contact-main form textarea{
+.section-contact-main form input,
+.section-contact-main form textarea {
     width: 100%;
     padding: 1rem 2rem;
     border: 0.5px solid #c9c9c9;
@@ -697,14 +709,14 @@ li {
     transition: all 0.2s linear;
 }
 
-.section-contact-main form input:focus, 
-.section-contact-main form textarea:focus{
+.section-contact-main form input:focus,
+.section-contact-main form textarea:focus {
     border: transparent;
     outline: none;
     box-shadow: var(--shadow);
 }
 
-.section-contact-main form input[type='submit']{
+.section-contact-main form input[type='submit'] {
     max-width: 10rem;
     margin: 0 auto;
     border: none;
@@ -715,7 +727,7 @@ li {
    ==================
 */
 
-.section-footer{
+.section-footer {
     background: var(--heading);
     transition: all 0.3s linear;
 }
@@ -723,7 +735,7 @@ li {
 .f-about h3,
 .f-links h3,
 .f-services h3,
-.f-addres h3{
+.f-addres h3 {
     color: var(--white);
     margin-bottom: 2rem;
     text-align: center;
@@ -734,48 +746,48 @@ li {
 .f-links a,
 .f-services li,
 .f-services a,
-.f-addres p{
+.f-addres p {
     color: #adadad;
     font-size: 1.5rem;
-    
+
 }
 
-.section-footer p{
+.section-footer p {
     font-size: 1.4rem;
 }
 
 .f-links ul,
 .f-services ul,
-.f-addres address{
+.f-addres address {
     display: flex;
     flex-direction: column;
-    gap:1.5rem;
+    gap: 1.5rem;
 }
 
 .f-addres address,
-.f-addres a{
+.f-addres a {
     color: #adadad;
     font-style: normal;
 }
 
-.f-addres address div:last-of-type a{
+.f-addres address div:last-of-type a {
     font-size: 1.3rem;
-    
+
 }
 
 .f-links span,
 .f-services span,
-.f-addres span{
+.f-addres span {
     margin-right: .5rem;
 }
 
 .f-links a:hover,
 .f-services a:hover,
-.f-addres a:hover{
+.f-addres a:hover {
     color: var(--white);
 }
 
-.f-social-icons{
+.f-social-icons {
     text-align: center;
     margin: 3rem 0;
 }
@@ -793,7 +805,7 @@ li {
 
 }
 
-.f-credit{
+.f-credit {
     text-align: center;
     font-size: 2rem;
 }
@@ -803,13 +815,13 @@ li {
    ==================
 */
 
-.scroll-style{
+.scroll-style {
     position: fixed;
     right: 2%;
     bottom: 4%;
 }
 
-.scroll-style .scroll-top{
+.scroll-style .scroll-top {
     width: 3rem;
     height: 3rem;
     color: var(--heading);
@@ -818,4 +830,75 @@ li {
     padding: 1.2rem 1.6rem;
     animation: water-wave 3s linear infinite;
     cursor: pointer;
+}
+
+/* ==================
+    Media Qquerries Start Here
+   ==================
+*/
+
+@media (max-width:980px) {
+    .header {
+        position: relative;
+    }
+
+    .mobile-nav-btn {
+        display: block;
+        z-index: 9999;
+        border: 2px solid var(--black);
+        color: var(--black);
+    }
+
+    .mobile-nav-btn .mobile-nav-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .header .navbar {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        background: var(--gradient);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    .header .navbar .navbar-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .navbar .navbar-link:link,
+    .header .navbar .navbar-link:visited {
+        font-size: 5rem;
+        color: var(--black);
+    }
+
+    .active .navbar{
+        transform: translateX(0);
+        transition: all 0.5s linear;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active .mobile-nav-btn .mobile-nav-icon[name="menu-outline"]{
+        display: none;
+    }
+
+    .active .mobile-nav-btn .mobile-nav-icon[name="close-outline"]{
+        display: block;
+    }
 }
