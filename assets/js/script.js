@@ -9,6 +9,25 @@ mob_btn.addEventListener('click', () => {
     headerElem.classList.toggle('active');
 });
 
+
+// sticky navbar
+
+const sec_bio = document.querySelector('.section-hero');
+
+const observer = new IntersectionObserver((entries) =>{
+    const ent = entries[0];
+    console.log(ent);
+    ent.isIntersecting === false 
+        ? document.body.classList.add('sticky')
+        : document.body.classList.remove('sticky');
+},{
+    root: null,
+    rootMargin:"-50px",
+    threshold:0,
+});
+
+observer.observe(sec_bio);
+
 // ======================
 // Creating a portgfolio tabbed component
 // ======================
