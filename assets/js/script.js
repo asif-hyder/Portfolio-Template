@@ -100,6 +100,29 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 
+  
+
+//   js media qurreies
+const jsMedia = (widthSize) => {
+    if (widthSize.matches) {
+        new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          });
+    }else{
+        new Swiper(".mySwiper", {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          });
+    };
+};
+
+const widthSize = window.matchMedia("(max-width:780px)");
+
+jsMedia(widthSize);
+
+widthSize.addEventListener("change", jsMedia);
+
 //   creating scroll to top
 
 const heroElem = document.querySelector('.section-hero');

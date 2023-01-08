@@ -33,6 +33,10 @@ html {
     overflow-x: hidden;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -582,6 +586,7 @@ li {
     width: 8rem;
     height: 8rem;
     object-fit: cover;
+    margin-bottom: 6rem;
     border-radius: 50%;
 }
 
@@ -855,11 +860,22 @@ li {
    ==================
 */
 
-@media (max-width:980px) {
-    .header {
-        position: relative;
+/* 980px */
+
+@media (max-width:61.2em) {
+    
+    html{
+        font-size: 50%;
     }
 
+    .header {
+        position: relative;
+        height: 7rem;
+    }
+
+    .sticky .header{
+        height: 7rem;
+    }
     .mobile-nav-btn {
         display: block;
         z-index: 9999;
@@ -868,8 +884,9 @@ li {
     }
 
     .mobile-nav-btn .mobile-nav-icon {
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        /* margin: 1rem 0; */
     }
 
     .header .navbar {
@@ -918,5 +935,80 @@ li {
 
     .active .mobile-nav-btn .mobile-nav-icon[name="close-outline"]{
         display: block;
+    }
+}
+
+/* 780 px */
+
+@media (max-width:48em) {
+    html{
+        font-size: 40%;
+    }
+   
+    .section-services .grid-three-colmn{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 680px */
+
+@media (max-width: 680px) {
+
+    h1{
+        line-height: .9;
+    }
+    .section-footer .grid-four-colmn{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-footer .grid{
+        gap:2rem;
+    }
+    .section-footer h3{
+        text-align: left;
+    }
+
+    
+}
+
+/* 580px */
+
+@media (max-width: 580px) {
+    .section-hero .grid-two-colmn{
+        grid-template-columns: 1fr;
+    }
+
+    .section-hero .section-hero-data{
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .section-bio-data .grid-two-colmn{
+        grid-template-columns: 1fr;
+    }
+    
+    .section-bio-data .bio-image{
+        grid-row: 2/3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .section-portfolio .grid-three-colmn{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-work-counters .grid-four-colmn{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-services .grid-three-colmn{
+        grid-template-columns: 1fr;
+    }
+
+    .section-contact .contact-container{
+        width: 90%;
+        margin: 0 auto;
     }
 }

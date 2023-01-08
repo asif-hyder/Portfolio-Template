@@ -32,6 +32,7 @@
             <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
         </div>
     </header>
+
     <!-- Main hero section Start here -->
     <main>
         <section class="section-hero section">
@@ -429,24 +430,25 @@
             </h2>
         </div>
         <div class="section-contact-main contact-container">
-            <form action="#">
+            <form action="https://formspree.io/f/moqzqnpq"
+            method="POST">
                 <div class="grid grid-two-colmn">
                     <div>
                         <label for="name"></label>
-                        <input type="text" name="name" id="name" placeholder="Full Name">
+                        <input type="text" name="name" id="name" placeholder="Full Name" required autocomplete="off">
                     </div>
                     <div>
                         <label for="email"></label>
-                        <input type="text" name="email" id="email" placeholder="example@example.com">
+                        <input type="text" name="email" id="email" placeholder="example@example.com" required autocomplete="off">
                     </div>
                 </div>
                 <div>
                     <label for="subject"></label>
-                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                    <input type="text" name="subject" id="subject" placeholder="Subject" required autocomplete="off">
                 </div>
                 <div>
                     <label for="textarea"></label>
-                    <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Message"></textarea>
+                    <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Message" required autocomplete="off"></textarea>
                 </div>
                 <div>
                     <input type="submit" id="submit" name="submit" class="btn">
