@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Designing portiolio template for first time">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, professionals">
+    <meta name="author" content="Asif Haider"/>
     <title>My Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -44,11 +47,15 @@
                         I am Asif Haider. I am a Front end develpor. I am very energetic and hardworking.
                     </p>
                     <div>
-                        <a href="#" class="btn hireme-btn">Hire me</a>
+                        <a href="#hire-me" class="btn hireme-btn">Hire me</a>
                     </div>
                 </div>
                 <div class="section-hero-image">
-                    <img src="assets/images/hero.JPG" alt="this is me asif haider" class="hero-image">
+                    <picture>
+                        <source srcset="assets/images/hero.webp">
+                        <source srcset="assets/images/hero.JPG">
+                        <img src="assets/images/hero.JPG" alt="this is me asif haider" class="hero-image">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -58,7 +65,11 @@
     <section class="section-bio-data section">
         <div class="container grid grid-two-colmn">
             <div class="bio-image">
-                <img src="assets/images/my bio.jpg" alt="My bio data image">
+                <picture>
+                    <source srcset="assets/images/my bio.webp">
+                    <source srcset="assets/images/my bio.jpg">
+                    <img src="assets/images/my bio.jpg" alt="this is me asif haider" class="hero-image">
+                </picture>
             </div>
             <div class="bio-data">
                 <h2 class="common-heading"> my bio-data</h2>
@@ -99,7 +110,7 @@
                     </div>
                 </div>
                 <div>
-                    <a href="#" class="btn download-cv-btn">download cv</a>
+                    <a href="https://drive.google.com/file/d/1IM3LydzVt0lsgb7KIMjLaxibPrErwcRV/view?usp=sharing" class="btn download-cv-btn" download="" target="_blank">download cv</a>
                 </div>
             </div>
         </div>
@@ -125,42 +136,66 @@
 
         <div class="container grid grid-three-colmn portfolio-images">
             <div class="img-overlay p-btn--1">
-                <img src="assets/images/work 1.jpg" alt="our works">
+                <picture>
+                    <source srcset="assets/images/work 1.webp">
+                    <source srcset="assets/images/work 1.jpg">
+                    <img src="assets/images/work 1.jpg" alt="this is me asif haider" class="hero-image">
+                </picture>
                 <div class="overlay">
                     <a href="" target="_blank" class="common-heading">Project 1</a>
                 </div>
             </div>
 
             <div class="img-overlay p-btn--1 p-btn--2 p-btn--3">
-                <img src="assets/images/work 2.jpg" alt="our works">
+                <picture>
+                    <source srcset="assets/images/work 4.webp">
+                    <source srcset="assets/images/work 4.jpg">
+                    <img src="assets/images/work 4.jpg" alt="this is me asif haider" class="hero-image">
+                </picture>
                 <div class="overlay">
                     <a href="" target="_blank" class="common-heading">Project 2</a>
                 </div>
             </div>
 
             <div class="img-overlay p-btn--2">
-                <img src="assets/images/work 3.jpg" alt="our works">
+                <picture>
+                    <source srcset="assets/images/work 3.webp">
+                    <source srcset="assets/images/work 3.jpg">
+                    <img src="assets/images/work 3.jpg" alt="this is me asif haider" class="hero-image">
+                </picture>
                 <div class="overlay">
                     <a href="" target="_blank" class="common-heading">Project 3</a>
                 </div>
             </div>
 
             <div class="img-overlay p-btn--1 p-btn--3">
-                <img src="assets/images/work 4.jpg" alt="our works">
+                <picture>
+                    <source srcset="assets/images/work 4.webp">
+                    <source srcset="assets/images/work 4.jpg">
+                    <img src="assets/images/work 4.jpg" alt="this is me asif haider" class="hero-image">
+                </picture>
                 <div class="overlay">
                     <a href="" target="_blank" class="common-heading">Project 4</a>
                 </div>
             </div>
 
             <div class="img-overlay p-btn--3">
-                <img src="assets/images/work 5.jpg" alt="our works">
+                <picture>
+                    <source srcset="assets/images/work 5.webp">
+                    <source srcset="assets/images/work 5.jpg">
+                    <img src="assets/images/work 5.jpg" alt="this is me asif haider" class="hero-image">
+                </picture>
                 <div class="overlay">
                     <a href="" target="_blank" class="common-heading">Project 5</a>
                 </div>
             </div>
 
             <div class="img-overlay p-btn--1 p-btn--2">
-                <img src="assets/images/work 6.jpg" alt="our works">
+                <picture>
+                    <source srcset="assets/images/work 6.webp">
+                    <source srcset="assets/images/work 6.jpg">
+                    <img src="assets/images/work 6.jpg" alt="this is me asif haider" class="hero-image">
+                </picture>
                 <div class="overlay">
                     <a href="" target="_blank" class="common-heading">Project 6</a>
                 </div>
@@ -423,7 +458,7 @@
 
     <!-- Contact Us section Start here -->
 
-    <section class="section section-contact">
+    <section class="section section-contact" id="hire-me">
         <div class="container">
             <h2 class="common-heading">
                 contact us
@@ -472,22 +507,22 @@
             <div class="f-links">
                 <h3>Links</h3>
                 <ul>
-                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span><a href="">Home</a></li>
-                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span><a href="">About</a></li>
-                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span><a href="">Service</a></li>
-                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span><a href="">Portfolio</a></li>
-                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span><a href="">Contact Us</a></li>
+                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span><a href="/index.html">Home</a></li>
+                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span><a href="/about.html">About</a></li>
+                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span><a href="/services.html">Service</a></li>
+                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span><a href="#portfolio">Portfolio</a></li>
+                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span><a href="/contact.html">Contact Us</a></li>
                 </ul>
             </div>
 
             <div class="f-services">
                 <h3>Services</h3>
                 <ul>
-                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span><a href="">Web Design</a></li>
-                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span><a href="">Web development</a></li>
-                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span><a href="">Graphic Design</a></li>
-                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span><a href="">Front End </a></li>
-                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span><a href="">Bautiful</a></li>
+                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span>Web Design</li>
+                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span>Web development</li>
+                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span>Graphic Design</li>
+                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span>Front End></li>
+                    <li><span><ion-icon name="arrow-forward-sharp"></ion-icon></span>Bautiful</li>
                 </ul>
             </div>
 
